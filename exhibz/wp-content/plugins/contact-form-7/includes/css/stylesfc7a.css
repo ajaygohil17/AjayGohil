@@ -1,0 +1,267 @@
+.wpcf7 .screen-reader-response {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	word-wrap: normal !important;
+}
+
+.wpcf7 form .wpcf7-response-output {
+	margin: 2em 0.5em 1em;
+	padding: 0.2em 1em;
+	border: 2px solid #00a0d2; /* Blue */
+}
+
+.wpcf7 form.init .wpcf7-response-output,
+.wpcf7 form.resetting .wpcf7-response-output,
+.wpcf7 form.submitting .wpcf7-response-output {
+	display: none;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+	border-color: #46b450; /* Green */
+}
+
+.wpcf7 form.failed .wpcf7-response-output,
+.wpcf7 form.aborted .wpcf7-response-output {
+	border-color: #dc3232; /* Red */
+}
+
+.wpcf7 form.spam .wpcf7-response-output {
+	border-color: #f56e28; /* Orange */
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output,
+.wpcf7 form.payment-required .wpcf7-response-output {
+	border-color: #ffb900; /* Yellow */
+}
+
+.wpcf7-form-control-wrap {
+	position: relative;
+}
+
+.wpcf7-not-valid-tip {
+	color: #dc3232; /* Red */
+	font-size: 1em;
+	font-weight: normal;
+	display: block;
+}
+
+.use-floating-validation-tip .wpcf7-not-valid-tip {
+	position: relative;
+	top: -2ex;
+	left: 1em;
+	z-index: 100;
+	border: 1px solid #dc3232;
+	background: #fff;
+	padding: .2em .8em;
+	width: 24em;
+}
+
+.wpcf7-list-item {
+	display: inline-block;
+	margin: 0 0 0 1em;
+}
+
+.wpcf7-list-item-label::before,
+.wpcf7-list-item-label::after {
+	content: " ";
+}
+
+.wpcf7-spinner {
+	visibility: hidden;
+	display: inline-block;
+	background-color: #23282d; /* Dark Gray 800 */
+	opacity: 0.75;
+	width: 24px;
+	height: 24px;
+	border: none;
+	border-radius: 100%;
+	padding: 0;
+	margin: 0 24px;
+	position: relative;
+}
+
+form.submitting .wpcf7-spinner {
+	visibility: visible;
+}
+
+.wpcf7-spinner::before {
+	content: '';
+	position: absolute;
+	background-color: #fbfbfc; /* Light Gray 100 */
+	top: 4px;
+	left: 4px;
+	width: 6px;
+	height: 6px;
+	border: none;
+	border-radius: 100%;
+	transform-origin: 8px 8px;
+	animation-name: spin;
+	animation-duration: 1000ms;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.wpcf7-spinner::before {
+		animation-name: blink;
+		animation-duration: 2000ms;
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes blink {
+	from {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+.wpcf7 [inert] {
+	opacity: 0.5;
+}
+
+.wpcf7 input[type="file"] {
+	cursor: pointer;
+}
+
+.wpcf7 input[type="file"]:disabled {
+	cursor: default;
+}
+
+.wpcf7 .wpcf7-submit:disabled {
+	cursor: not-allowed;
+}
+
+.wpcf7 input[type="url"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"] {
+	direction: ltr;
+}
+
+.wpcf7-reflection > output {
+	display: list-item;
+	list-style: none;
+}
+
+.wpcf7-reflection > output[hidden] {
+	display: none;
+}
+
+.hero-p-content{
+	line-height: 36px;
+	font-size: 22px;
+}
+.hero-p-content span{
+	display: inline-block;
+	color: #ff1d89;
+	font-weight: bold;
+}
+.hero-h1 span{
+	display: inline-block;
+	animation: colorChange 5s infinite;
+	padding-top: 10px;
+}
+
+@keyframes colorChange {
+	0%   { color: #ff1d89; }   /* Green */
+	25%  { color: #0083fe; }   /* Red */
+	50%  { color: #ff00bf; }   /* Blue */
+	75%  { color: #ffff00; }   /* Yellow */
+	100% { color: #39ff00; }   /* Back to Green */
+  }
+
+  .janvi-mam {
+  display: inline-block;
+  animation: upDown 3s ease-in-out infinite;
+}
+
+/* Keyframes for up and down movement */
+@keyframes upDown {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+.happy-birthday-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff006a, #ff7eb3, #6a5acd, #00c6ff);
+  background-size: 400% 400%;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  animation: gradientMove 5s ease infinite;
+  box-shadow: 0 0 20px rgba(255, 0, 106, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.happy-birthday-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 0, 106, 0.8);
+  color: black;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gujrati-text{
+	font-size: 36px;
+	color: #ff007a;
+	font-weight: bold;
+	display: block;
+	padding-top: 20px;
+}
+
+
+
+@media only screen and (max-width:970px) {
+	.elementor-section.elementor-section-boxed > .elementor-container{
+		padding-top: 60px!important;
+	}
+}
+@media only screen and (max-width:555px) {
+	.logo-small-size{
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.button-small-size{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+}
+
+.mom-dad{
+	font-size: 26px;
+	color: whitesmoke;
+	font-weight: bold;
+}
